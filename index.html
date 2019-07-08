@@ -1,1 +1,349 @@
 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<META NAME="description" CONTENT="Contact Info for Alan Patten, an ambitious and enthusiastic agent of change, who wants to help all companies master their internet strategy, brand footprint and enhance their profitability.">
+<META NAME="keywords" CONTENT="design, development, San Francisco, Oakland, Los Angeles, Web Design, Advertising, Graphic design, identity, branding, marketing strategy, advertising, content management, user interface, print collateral, trade show, marketing, print design, interactive, product demo, multimedia, entertainment, high tech, Flash, san francisco web design, san francisco graphic design, san francisco website design, san francisco web site design, oakland web design, oakland web site design, oakland graphic design, best creative direction, california web design, california graphic design, california web site design, alan patten">
+<meta name="distribution" content="global" />
+<meta name="robots" content="follow, all" />
+<meta name="language" content="en, fr, de, ru" />
+
+<title>Alan Patten Creative Director &gt; Thoughts</title>
+<meta name="generator" content="" />
+<link rel="Shortcut Icon" href="/img/favicon.ico" type="image/x-icon" />
+
+<style type="text/css" media="all">
+@import "style.css";
+</style>
+<!--[if lte IE 6]><link href="ie.css" rel="stylesheet" type="text/css"><![endif]-->
+<script type="text/javascript">
+<!--
+if(window.opera) {document.write('<link rel="stylesheet" type="text/css" href="opera.css" />');}
+//-->
+</script>
+<script type="text/javascript" src="slider.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+
+<style type="text/css">
+
+/*Example CSS for the two demo tickers*/
+
+#domticker{
+width: 200px;
+height: 100px;
+border: 0px dashed black;
+padding: 5px;
+background-color: #FFFFCA;
+}
+
+#domticker div{ /*IE6 bug fix when text is bold and fade effect (alpha filter) is enabled. Style inner DIV with same color as outer DIV*/
+background-color: #FFFFCA;
+}
+
+#domticker a{
+font-weight: bold;
+}
+
+#domticker2{
+width: 350px;
+height: 1.2em;
+border: 0px solid black;
+padding: 3px;
+}
+
+#domticker2 a{
+text-decoration: none;
+}
+
+.someclass{ //class to apply to your scroller(s) if desired
+}
+
+</style>
+
+<script type="text/javascript">
+
+/*Example message arrays for the two demo scrollers*/
+
+var tickercontent=new Array()
+tickercontent[0]='<a href="http://www.javascriptkit.com">JavaScript Kit</a><br />Comprehensive JavaScript tutorials and over 400+ free scripts!'
+tickercontent[1]='<a href="http://www.codingforums.com">Coding Forums</a><br />Web coding and development forums.'
+tickercontent[2]='<a href="http://www.cssdrive.com" target="_new">CSS Drive</a><br />Categorized CSS gallery and examples.'
+
+var tickercontent2=new Array()
+tickercontent2[0]='<a href="ap_contact_page.php">What is your idea of perfect happiness?</a>'
+tickercontent2[1]='<a href="ap_contact_page.php">What are the most overused words in business today?</a>'
+tickercontent2[2]='<a href="ap_contact_page.php">Does knowing Javascript make a person geeky?</a>'
+
+tickercontent2[3]='<a href="ap_contact_page.php">What is your greatest extravagance?</a>'
+tickercontent2[4]='<a href="ap_contact_page.php">When and where were you happiest?</a>'
+tickercontent2[5]='<a href="ap_contact_page.php">What is your current state of mind?</a>'
+tickercontent2[6]='<a href="ap_contact_page.php">If you could change one thing about yourself, what would it be?</a>'
+tickercontent2[7]='<a href="ap_contact_page.php">What would you consider your greatest achievement?</a>'
+tickercontent2[8]='<a href="ap_contact_page.php">What do you most value in your friends?</a>'
+
+
+tickercontent2[9]='<a href="ap_contact_page.php">What is your favorite journey?</a>'
+tickercontent2[10]='<a href="ap_contact_page.php">What is the trait you most deplore in others?</a>'
+tickercontent2[11]='<a href="ap_contact_page.php">What is your most treasured possession?</a>'
+tickercontent2[12]='<a href="ap_contact_page.php">How would you like to die?</a>'
+tickercontent2[13]='<a href="ap_contact_page.php">What is your motto?</a>'
+
+
+</script>
+
+
+<script type="text/javascript">
+
+/***********************************************
+* DHTML Ticker script- © Dynamic Drive (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit http://www.dynamicdrive.com/ for this script and 100s more.
+***********************************************/
+
+function domticker(content, divId, divClass, delay, fadeornot){
+this.content=content
+this.tickerid=divId //ID of master ticker div. Message is contained inside first child of ticker div
+this.delay=delay //Delay between msg change, in miliseconds.
+this.mouseoverBol=0 //Boolean to indicate whether mouse is currently over ticker (and pause it if it is)
+this.pointer=1
+this.opacitystring=(typeof fadeornot!="undefined")? "width: 100%; filter:progid:DXImageTransform.Microsoft.alpha(opacity=100); -moz-opacity: 1" : ""
+if (this.opacitystring!="") this.delay+=800 //add 1/2 sec to account for fade effect, if enabled
+this.opacitysetting=0.2 //Opacity value when reset. Internal use.
+document.write('<div id="'+divId+'" class="'+divClass+'"><div style="'+this.opacitystring+'">'+content[0]+'</div></div>')
+var instanceOfTicker=this
+setTimeout(function(){instanceOfTicker.initialize()}, delay)
+}
+
+domticker.prototype.initialize=function(){
+var instanceOfTicker=this
+this.contentdiv=document.getElementById(this.tickerid).firstChild //div of inner content that holds the messages
+document.getElementById(this.tickerid).onmouseover=function(){instanceOfTicker.mouseoverBol=1}
+document.getElementById(this.tickerid).onmouseout=function(){instanceOfTicker.mouseoverBol=0}
+this.rotatemsg()
+}
+
+domticker.prototype.rotatemsg=function(){
+var instanceOfTicker=this
+if (this.mouseoverBol==1) //if mouse is currently over ticker, do nothing (pause it)
+setTimeout(function(){instanceOfTicker.rotatemsg()}, 600)
+else{
+this.fadetransition("reset") //FADE EFFECT- RESET OPACITY
+this.contentdiv.innerHTML=this.content[this.pointer]
+this.fadetimer1=setInterval(function(){instanceOfTicker.fadetransition('up', 'fadetimer1')}, 600) //FADE EFFECT- PLAY IT
+this.pointer=(this.pointer<this.content.length-1)? this.pointer+1 : 0
+setTimeout(function(){instanceOfTicker.rotatemsg()}, this.delay) //update container
+}
+}
+
+// -------------------------------------------------------------------
+// fadetransition()- cross browser fade method for IE5.5+ and Mozilla/Firefox
+// -------------------------------------------------------------------
+
+domticker.prototype.fadetransition=function(fadetype, timerid){
+var contentdiv=this.contentdiv
+if (fadetype=="reset")
+this.opacitysetting=0.2
+if (contentdiv.filters && contentdiv.filters[0]){
+if (typeof contentdiv.filters[0].opacity=="number") //IE6+
+contentdiv.filters[0].opacity=this.opacitysetting*100
+else //IE 5.5
+contentdiv.style.filter="alpha(opacity="+this.opacitysetting*100+")"
+}
+else if (typeof contentdiv.style.MozOpacity!="undefined" && this.opacitystring!=""){
+contentdiv.style.MozOpacity=this.opacitysetting
+}
+else
+this.opacitysetting=1
+if (fadetype=="up")
+this.opacitysetting+=0.2
+if (fadetype=="up" && this.opacitysetting>=1)
+clearInterval(this[timerid])
+}
+
+</script>
+
+</head>
+<body>
+<div id="layout1">
+	<div id="header">
+		<ul class="menu" id="menu">
+			
+				</ul>
+			</li><!-- end Portfolio -->
+		
+	  </ul>
+	  <h1><a href="indexsamples.htm">Alan<strong>Patten</strong><span>Creative Director | </span> </a></h1>
+	  <div class="searchcont">
+<form id="searchform" method="get" action="post">
+			<div></div>
+		</form>
+		</div>
+  </div><!-- end header -->
+	
+<div class="w780 m0auto">
+	<ul class="content">
+		<li class="w560 fr pb45">
+		<div class="bread">
+		<a href="index.htm">Home</a> &gt; PROUST QUESTIONNAIRE <a href="#">&gt; Let's get real</a></div>
+		<!-- end bread -->
+		<h2>Proust Questionnaire<br />
+		  <br />
+		  • Hey, so we definitely need to talk …<br />
+		  There's so much I have to tell you.</h2>
+	  </li>
+		<li class="w560 fr pb45">
+		  <h2>Are you ready to sit down and start going over it?<br />
+	      </h2>
+	  </li>
+		<li class="w560 fr pb45"><p><br />
+          
+          <script type="text/javascript">
+
+//new domticker(name_of_message_array, CSS_ID, CSS_classname, pause_in_miliseconds, optionalfadeswitch)
+
+
+new domticker(tickercontent2, "domticker2", "someclass", 1000, "fadeit")
+          </script>
+		  </p>
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+"Like" this page, and I'll put you on the Xmas CD list (it's a perennial classic).<br />
+         <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Falanpatten.com%2Findex.htm&amp;layout=standard&amp;show_faces=true&amp;width=200&amp;action=like&amp;font=lucida+grande&amp;colorscheme=light&amp;height=160" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:500px; height:180px;" allowTransparency="true"></iframe>
+		</li>
+		<li class="w560 fr pb45"><br />
+          <br />
+      </li>
+	  <!-- end w560 -->
+
+		<li class="w160 pt53b45">
+		<ul class="second-menu">
+		<li><a href="indexsamples.htm">Select Projects</a></li>
+		<li><a href="#">Thoughts</a></li>
+		
+		<li><a href="resume.htm" title="Alan Patten Creative Director | Brand Whisperer">Resume</a></li>
+		</ul>
+		<li class="w160 pb45 f10"><br />
+		  <br />
+		  <br />
+		  <br />
+		  <br />
+		  <br />
+		</li>
+	</ul>
+	<!-- end maincontent -->
+	<div class="clear"><!-- --></div>
+</div><!-- end w780 -->
+
+	<div class="clear"><!-- --></div>
+</div><!-- end layout -->
+
+<div id="footer">
+	<ul class="fcontent">
+
+	<li class="w130 pr30">
+	<h4>Contact Us</h4>
+	<a href="ap_contact_page.php" target="_self"><img src="img/z10.jpg" onmouseover="src='img/z10_h.jpg'" onmouseout="src='img/z10.jpg'" title="Peek-a-Boo"/></a>
+	<br/>
+	Tel. 510-612-1310<br/>
+	<a href="mailto:ap@alanpatten.com" target="_blank" title="I like email best">ap@alanpatten.com</a>	</li>
+
+	<li class="w130 pr30">
+	<h4>Clients</h4>
+	<ul class="clients">
+	<li><a href="mcl.htm">Marin Conservation League</a></li>
+	<li><a href="sirf.htm">SiRF</a></li>
+	<li><a href="insweb.htm">InsWeb</a></li>
+	<li><a href="logitech.htm">Logitech</a></li>
+	<li><a href="janes.htm">Electronic Arts</a></li>
+	<li><a href="clients.htm">SFMOMA</a></li>
+	<li><a href="bart.htm">BART</a></li>
+	</ul>
+	</li>
+
+	<li class="w210 pr30">
+	<h4>Services</h4>
+	<ul class="services">
+	<li>Web Design	/	Project	Management</a><a href="services_process.htm">Full service capabilities to design and deploy compelling web presence.</a></li>
+	<li>Advertising <a href="services_process.htm">Print ads,<br />
+	Broadcast,<br />
+	Outdoor,<br />
+	Interactive.</a></li>
+	<li>Internet Marketing	<a href="services_process.htm">eMail blasts, microsites,<br />
+	Interstitials, Flash Ads,<br />
+	Mobile Ads, Web 2.0 Strategies.</a></li>
+	</ul>
+	</li>
+
+	<li class="w210">
+	<h4>Latest News</h4>
+	
+	<li><a href="http://pinterest.com/alanpatten/"><img src="http://passets-cdn.pinterest.com/images/pinterest-button.png" width="78" height="26" title="See more of me at Pinterest" alt="Follow Me on Pinterest" /></a></li>
+	<br/><br/><br/><br/><br/><br/>
+	<li><a href="http://www.linkedin.com/profile/view?id=883390&trk=tab_pro" target="_blank"><img src="img/linkedin.png" title="Check out my LinkedIN Profile"/></a></li><br /><br/><br/>
+	
+  </ul>
+	
+	</li>
+	<br />
+	</ul>
+  <div class="clear"><!-- --></div>
+</div>
+<!-- end footer -->
+
+<div class="copyrights">
+	<div class="w780 m0auto f9">2014 © alanpatten.com | portfolio site | design philosophy<br/>
+Designed by <a href="#">Alan Patten — Decide what you want and go for it.</a></div>
+  <!-- end w780 -->
+</div><!-- end copyrights -->
+
+<script type="text/javascript">
+	var menu=new menu.dd("menu");
+	menu.init("menu","menuhover");
+</script>
+<script type="text/javascript">
+	$('slideshow').style.display='none';
+	$('wrapper').style.display='block';
+	var slideshow=new TINY.slideshow("slideshow");
+	window.onload=function(){
+		slideshow.auto=true;
+		slideshow.speed=5;
+		slideshow.link="linkhover";
+		slideshow.info="information";
+		slideshow.thumbs="slider";
+		slideshow.left="slideleft";
+		slideshow.right="slideright";
+		slideshow.scrollSpeed=5;
+		slideshow.spacing=3;
+		slideshow.active="#fff";
+		slideshow.init("slideshow","image","imgprev","imgnext","imglink");
+	}
+</script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12176150-1");
+pageTracker._trackPageview();
+} catch(err) {}</script></body></html>
+
+
+
+<script type="text/javascript">
+var __lc = {};
+__lc.license = 3602601;
+
+(function() {
+	var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+	lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+})();
+</script>
+
+</body></html>
